@@ -93,7 +93,7 @@ if page == 'Home / OverView':
 
     
     num_col1 = df.select_dtypes(include=["int64", "float64"]).columns
-    st.plotly_chart(px.scatter_matrix(data_frame=df[num_col1],height=600,title = 'the correlation between all numerical columns  for every contract type'))
+    st.plotly_chart(px.scatter_matrix(data_frame=df[num_col1],height=600,title = 'the correlation between all numerical columns '))
 
     col1, col2= st.columns(2)
     col1.plotly_chart(px.scatter(data_frame=df,x='tenure',y = 'subscription_count',color='churn',title = 'the count of months with the count of subscribtions showing churn'))
